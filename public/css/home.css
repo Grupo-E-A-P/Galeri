@@ -12,11 +12,11 @@ body {
 
     margin: 0;
 
-    background-image: linear-gradient(#222444, #1c1e3d);
+    background-image: linear-gradient(#1c1e3d, #0d0e1d);
 }
 
 a {
-    margin-right: auto;
+
     text-decoration: none;
 }
 
@@ -35,7 +35,8 @@ a {
     align-items: center;
 
 
-	background-color: #31335C;
+	background-color: #1c1e3d;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 	list-style-type: none;
 }
 
@@ -70,6 +71,7 @@ a {
     justify-content: center;
 
     background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 #uploadButton {
@@ -80,6 +82,7 @@ a {
     text-align: center;
 
     width: 150px;
+    margin-left: 20px;
 
     font-size: 16px;
     cursor: pointer;
@@ -90,4 +93,28 @@ a {
 
 #uploadButton:hover {
     background-color: #747ADB;
+}
+
+#quit {
+    color:#fa8072;
+    font-size: 18px;
+
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#quit:hover {
+    color: #ffbab3;
+}
+
+#help {
+    color:#fac472;
+    font-size: 18px;
+
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#help:hover {
+    color: #ffdcb3;
 }

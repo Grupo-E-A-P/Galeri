@@ -17,13 +17,13 @@
             </a>
             <button id="uploadButton">UPLOAD</button>
             <div id="user" style="margin-left: auto">Olá Usuário</div>
+            <span id="help">Ajuda</span>
+            <span id="quit">Sair</span>
     </div>
 
     <div id="feedContainer">
         <div id="feed"></div>
     </div>
-
-
 
     <div id="theme">
        <p>TEMA</p>
