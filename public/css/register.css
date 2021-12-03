@@ -1,0 +1,83 @@
+* {
+    font-family: 'Ubuntu';
+    font-size: 25px;
+    color: #fff;
+}
+
+
+body {
+    display: flex;
+    flex: 1;
+	flex-direction: column;
+    height: 100vh;
+
+    margin: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(#202578, #1c1e3d);
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    margin-top: 15px;
+
+    width: 350px;
+    height: 50px;
+
+    border: none;
+    padding: 3px 6px;
+
+    font-size: 16px;
+
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
+#title {
+    font-size: 35px;
+}
+
+#registerContainer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+#createAccButton {
+    background-color: #31335C;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+
+    width: 300px;
+
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    margin-top: 15px;
+}
+
+#createAccButton:hover {
+    background-color: #747ADB;
+}
+
+#goBack {
+    font-size: 16px;
+    margin-top: 15px;
+
+    cursor:pointer;
+    color: #747ADB;
+}
+
+#goBack:hover {
+    color: #fff;
+}

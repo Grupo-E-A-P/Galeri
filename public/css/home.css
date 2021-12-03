@@ -1,0 +1,93 @@
+* {
+    font-family: 'Ubuntu';
+    font-size: 25px;
+    color: #fff;
+
+}
+
+body {
+    display: flex;
+	flex-direction: column;
+	height: 120vh;
+
+    margin: 0;
+
+    background-image: linear-gradient(#222444, #1c1e3d);
+}
+
+a {
+    margin-right: auto;
+    text-decoration: none;
+}
+
+#topbar {
+    display: flex;
+	justify-content: space-between;
+	position: sticky;
+    z-index: 2;
+
+	height: 50px;
+
+	top: 0;
+	margin: 0;
+    padding: 0 10px;
+
+    align-items: center;
+
+
+	background-color: #31335C;
+	list-style-type: none;
+}
+
+
+#feedContainer {
+    display:flex;
+    flex: 1;
+    justify-content: center;
+}
+
+#feed{
+    height: 100%;
+    width: 35vw;
+    background-color: rgba(0, 0, 0, 0.2);;
+}
+
+#user {
+    font-size: 18px;
+}
+
+#theme {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    right: 10px;
+
+    height: 125px;
+    width: 325px;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#uploadButton {
+    background-color: #31335C;
+    border: none;
+    color: #fff;
+    padding: 9px 5px;
+    text-align: center;
+
+    width: 150px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+#uploadButton:hover {
+    background-color: #747ADB;
+}
