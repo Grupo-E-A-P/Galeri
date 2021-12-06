@@ -60,5 +60,10 @@ Route::get('/login', function () {
 	return view('login.index');
 });
 
+Route::get('/help', function () {
+	return view('ajuda.index');
+});
+
+
 
 //view = helper

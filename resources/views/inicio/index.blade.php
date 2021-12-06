@@ -15,10 +15,18 @@
             <a href="/">
                 <span style="margin-right: auto; cursor: pointer;">GALERI</span>
             </a>
+
             <button id="uploadButton">UPLOAD</button>
+
             <div id="user" style="margin-left: auto">Olá Usuário</div>
-            <span id="help">Ajuda</span>
-            <span id="quit">Sair</span>
+
+            <a href="/help">
+                <span id="help">Ajuda</span>
+            </a>
+
+            <a href="/">
+                <span id="quit">Sair</span>
+            </a>
     </div>
 
     <div id="feedContainer">
