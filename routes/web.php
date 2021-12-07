@@ -17,51 +17,29 @@ use Illuminate\Http\Request;
 
 // localhost:8000/
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// //página inicial das tarefas
-// Route::get('/tarefas/criar', function () {
-
-// 	//implementação da ação associada a /tarefas
-// 	//funcionalidade
-
-// 	//pegar dados no BD
-
-// 	//template + dados
-// 	return view('tarefas.create');
-// });
-
-// Route::get('/tarefas', function () {
-// 	return view('tarefas.home');
-// });
-
-// Route::post('/tarefas/salvar', function (Request $request) {
-// 	$name = $request->post('descricao');
-
-// 	return "Registro salvo";
-// })->name('tarefas.salvar');
-
-
 Route::get('/', function () {
-	return view('bemvindo.index');
+	return view('welcome');
 });
 
 Route::get('/home', function () {
-	return view('inicio.index');
-});
+    $nome = "Halyson";
+	return view('home', ['nome' => $nome]);
+})->name('galeri.inicio');
 
 Route::get('/cadastro', function () {
-	return view('cadastro.index');
-});
+	return view('register');
+})->name('galeri.cadastrar');
+
+Route::post('/salvar', function () {
+	return "Cadastro realizado com sucesso!";
+})->name('galeri.cadastroSalvar');
 
 Route::get('/login', function () {
-	return view('login.index');
+	return view('login');
 });
 
 Route::get('/help', function () {
-	return view('ajuda.index');
+	return view('help');
 });
 
 
