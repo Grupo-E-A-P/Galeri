@@ -17,7 +17,6 @@ body {
     min-height: 100vh;
 	flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     background-image: linear-gradient(#1c1e3d, #0d0e1d);
 }
@@ -61,8 +60,12 @@ a {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    width: 35vw;
+    width: 40vw;
     background-color: rgba(0, 0, 0, 0.2);
+}
+
+#feedImage{
+    max-width: 425px;
 }
 
 #imageContainer {

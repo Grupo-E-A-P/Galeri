@@ -29,11 +29,14 @@
         <div id="feed">
             @foreach($images as $image)
                 <div id="imageContainer">
-                    <span>{{ $image->title}} - {{ $image->id}}</span>
-                    <img src="/img/images/{{ $image->image }}" alt="{{$image ->title}}" />
-                    <div id="imgDate">07/12/2021</div>
+                    <span>{{ $image->title}}</span>
+                    <img src="/img/images/{{ $image->image }}" alt="{{$image ->title}}" id="feedImage"/>
+                    <div id="imgDate">{{ date('d/m/y', strtotime($image->created_at)) }}</div>
                 </div>
             @endforeach
+            @if(count($images) == 0)
+                <span>Não há imagens. Comece enviado a sua!</span>
+            @endif
         </div>
     </div>
 
