@@ -12,7 +12,7 @@
         <input type="text" placeholder="Email"/>
         <input type="password" placeholder="Senha"/>
         <input type="password" placeholder="Confirme sua senha"/>
-        <button id="createAccButton" type="submit" onclick="handleSignIn()">CRIAR CONTA</button>
+        <button id="createAccButton" type="submit">CRIAR CONTA</button>
 
         <a href="/">
             <span id="goBack">Voltar</span>

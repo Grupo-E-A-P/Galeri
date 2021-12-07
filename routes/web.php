@@ -21,10 +21,13 @@ Route::get('/', function () {
 	return view('welcome');
 });
 
-Route::get('/home', function () {
-    $nome = "Halyson";
-	return view('home', ['nome' => $nome]);
-})->name('galeri.inicio');
+use App\Http\Controllers\ImageController;
+
+Route::get('/home', [ImageController::class, 'index'] )->name('galeri.inicio');
+
+Route::get('/images/create', [ImageController::class, 'create'] );
+
+Route::post('/images', [ImageController::class, 'store'] );
 
 Route::get('/cadastro', function () {
 	return view('register');
@@ -40,6 +43,10 @@ Route::get('/login', function () {
 
 Route::get('/help', function () {
 	return view('help');
+});
+
+Route::get('/home/{id}', function ($id) {
+	return view('image', ['id' => $id]);
 });
 
 

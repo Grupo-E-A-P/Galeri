@@ -17,6 +17,7 @@ body {
     min-height: 100vh;
 	flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     background-image: linear-gradient(#1c1e3d, #0d0e1d);
 }
@@ -52,13 +53,22 @@ a {
 
 #feedContainer {
     display:flex;
-    flex: 1;
+
     justify-content: center;
 }
 
 #feed{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
     width: 35vw;
-    background-color: rgba(0, 0, 0, 0.2);;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#imageContainer {
+    display: flex;
+    flex-direction: column;
+
 }
 
 #user {
@@ -125,6 +135,16 @@ a {
 
 #help:hover {
     color: #ffdcb3;
+}
+
+.msg {
+    position: absolute;
+    top: 65px;
+    left: 15px;
+
+    padding: 10px 15px;
+
+    background-color: #286639;
 }
 
 /*Help*/
@@ -256,6 +276,7 @@ input {
     flex-direction: column;
 
     align-items: center;
+
 }
 
 #createAccButton {
