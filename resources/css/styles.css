@@ -1,0 +1,365 @@
+* {
+    font-family: 'Ubuntu';
+    font-size: 25px;
+    color: #fff;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    outline: none;
+}
+
+body {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+	flex-direction: column;
+    align-items: center;
+
+    background-image: linear-gradient(#1c1e3d, #0d0e1d);
+}
+
+a {
+
+    text-decoration: none;
+}
+
+/*Home*/
+
+#topbar {
+    display: flex;
+	justify-content: space-between;
+	position: sticky;
+    z-index: 2;
+
+	height: 50px;
+    width: 100%;
+
+	top: 0;
+	margin: 0;
+    padding: 0 10px;
+
+    align-items: center;
+
+
+	background-color: #1c1e3d;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	list-style-type: none;
+}
+
+
+#feedContainer {
+    display:flex;
+
+    justify-content: center;
+}
+
+#feed{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 40vw;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#feedImage{
+    max-width: 425px;
+}
+
+#imageContainer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#user {
+    font-size: 18px;
+}
+
+#theme {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    right: 10px;
+
+    height: 125px;
+    width: 325px;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#uploadButton {
+    background-color: #31335C;
+    border: none;
+    color: #fff;
+    padding: 9px 5px;
+    text-align: center;
+
+    width: 150px;
+    margin-left: 20px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+#uploadButton:hover {
+    background-color: #747ADB;
+}
+
+#quit {
+    color:#fa8072;
+    font-size: 18px;
+
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#quit:hover {
+    color: #ffbab3;
+}
+
+#help {
+    color:#fac472;
+    font-size: 18px;
+
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#help:hover {
+    color: #ffdcb3;
+}
+
+.msg {
+    position: absolute;
+    top: 65px;
+    left: 15px;
+
+    padding: 10px 15px;
+
+    background-color: #286639;
+}
+
+/*Help*/
+
+#contactButton {
+    background-color: #31335C;
+    border: none;
+    color: #fff;
+    padding: 9px 5px;
+    text-align: center;
+
+    width: 200px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+#contactButton:hover {
+    background-color: #747ADB;
+}
+
+#qaContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;;
+
+    width: 70vw;
+
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+#qContainer {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
+    height: 60px;
+
+    border-left: solid 6px #0d0e1d;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#aContainer {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
+    height: 60px;
+
+    border-left: solid 6px #1c1e3d;
+}
+
+#goBackA {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+/*Login*/
+
+input {
+    margin-top: 15px;
+
+    width: 350px;
+    height: 50px;
+
+    border: none;
+    padding: 3px 6px;
+
+    font-size: 16px;
+
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
+#title {
+    font-size: 35px;
+}
+
+#loginContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#enterAccButton {
+    background-color: #31335C;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+
+    width: 300px;
+
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    margin-top: 15px;
+}
+
+#enterAccButton:hover {
+    background-color: #747ADB;
+}
+
+#goBack {
+    font-size: 16px;
+    margin-top: 15px;
+
+    cursor:pointer;
+    color: #747ADB;
+}
+
+#goBack:hover {
+    color: #fff;
+}
+
+/*Register*/
+
+#registerContainer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+#createAccButton {
+    background-color: #31335C;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+
+    width: 300px;
+
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    margin-top: 15px;
+}
+
+#createAccButton:hover {
+    background-color: #747ADB;
+}
+
+/*Welcome*/
+
+#centerContainer {
+    display: flex;
+    flex: 1;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcomeTitle {
+    font-size: 45px;
+}
+
+#text {
+    text-align: center;
+}
+
+#text2 {
+    font-size: 20px;
+
+}
+
+#logintext {
+    font-weight: bold;
+    color: #747ADB;
+
+    margin-top: 0;
+
+    cursor: pointer;
+}
+
+#logintext:hover {
+    color: #fff;
+}
+
+#loginButton {
+    background-color: #31335C; /* Green */
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+
+
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#loginButton:hover {
+    background-color: #747ADB;
+}
+
+
+
+

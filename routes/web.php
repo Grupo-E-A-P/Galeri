@@ -29,17 +29,17 @@ Route::get('/images/create', [ImageController::class, 'create'] );
 
 Route::post('/images', [ImageController::class, 'store'] );
 
-Route::get('/cadastro', function () {
-	return view('register');
-})->name('galeri.cadastrar');
+// Route::get('/cadastro', function () {
+// 	return view('register');
+// })->name('galeri.cadastrar');
 
-Route::post('/salvar', function () {
-	return "Cadastro realizado com sucesso!";
-})->name('galeri.cadastroSalvar');
+// Route::post('/salvar', function () {
+// 	return "Cadastro realizado com sucesso!";
+// })->name('galeri.cadastroSalvar');
 
-Route::get('/login', function () {
-	return view('login');
-});
+// Route::get('/login', function () {
+// 	return view('login');
+// });
 
 Route::get('/help', function () {
 	return view('help');
@@ -52,3 +52,7 @@ Route::get('/home/{id}', function ($id) {
 
 
 //view = helper
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

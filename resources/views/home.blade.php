@@ -9,19 +9,31 @@
                 <span style="margin-right: auto; cursor: pointer;">GALERI</span>
             </a>
 
+            @auth
             <a href="/images/create">
                 <button id="uploadButton">UPLOAD</button>
             </a>
 
-            <div id="user" style="margin-left: auto">Olá, Usuário   </div>
+            <div id="user" style="margin-left: auto">Olá, {{ Auth::user()->name }}</div>
+            @endauth
+
+            @guest
+            <div id="user" style="margin-left: auto">Olá, Guest</div>
+            @endguest
 
             <a href="/help">
                 <span id="help">Ajuda</span>
             </a>
 
-            <a href="/">
-                <span id="quit">Sair</span>
-            </a>
+            @auth
+            <form action="logout" method="POST">
+                @csrf
+                <a href="/logout" onclick="event.preventDefault();
+                    this.closest('form').submit();">
+                    <span id="quit">Sair</span>
+                </a>
+            </form>
+            @endauth
     </div>
 
 

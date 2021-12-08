@@ -7,7 +7,7 @@
     <div id="centerContainer">
         <span id="welcomeTitle">Uma galeria de imagens, sempre variando!</span>
         <span id="text">O Galeri busca o compartilhamento de pinturas, desenhos, imagens e outras artes visuais através de um tema que muda regularmente.</span>
-        <a href="{{ route('galeri.cadastrar')}}">
+        <a href="/register">
             <button id="loginButton" >CADASTRE-SE GRATUITAMENTE</button>
         </a>
 
