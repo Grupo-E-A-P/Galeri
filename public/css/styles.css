@@ -280,6 +280,12 @@ input {
 
 /*Register*/
 
+.registerDiv {
+
+    width: 100%;
+    height: 100%;
+}
+
 #registerContainer {
     display: flex;
     flex-direction: column;
@@ -314,7 +320,10 @@ input {
 
 .centerContainer {
     display: flex;
+    width:100%;
+    height: 100%;
     flex: 1;
+
 
     flex-direction: column;
     align-items: center;

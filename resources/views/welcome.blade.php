@@ -4,6 +4,7 @@
 
 @section('content')
 
+
     <div class="centerContainer">
 
         <span id="welcomeTitle">Uma galeria de imagens, sempre variando!</span>
@@ -19,4 +20,6 @@
 
     </div>
 
+
 @endsection
+

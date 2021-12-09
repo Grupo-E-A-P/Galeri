@@ -5,6 +5,7 @@
 
 @section('content')
 
+<div class= "registerDiv">
     <form id="registerContainer" action="{{url('/salvar')}}" method="POST">
         @csrf
         <span id="title">Cadastro</span>
@@ -18,5 +19,8 @@
             <span id="goBack">Voltar</span>
         </a>
     </form>
+</div>
+
 
 @endsection
+
