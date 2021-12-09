@@ -6,7 +6,7 @@
 
 <div id="topbar">
             <a href="/">
-                <span style="margin-right: auto; cursor: pointer;">GALERI</span>
+                <span style="margin-right: auto; font-weight: bold; cursor: pointer;">GALERI</span>
             </a>
 
             @auth
@@ -26,7 +26,7 @@
             </a>
 
             @auth
-            <form action="logout" method="POST">
+            <form action="logout" method="POST" style="font-size: 0;">
                 @csrf
                 <a href="/logout" onclick="event.preventDefault();
                     this.closest('form').submit();">
@@ -41,9 +41,8 @@
         <div id="feed">
             @foreach($images as $image)
                 <div id="imageContainer">
-                    <span>{{ $image->title}}</span>
+                    <span>{{ $image->title}} - {{ date('d/m/y', strtotime($image->created_at)) }}</span>
                     <img src="/img/images/{{ $image->image }}" alt="{{$image ->title}}" id="feedImage"/>
-                    <div id="imgDate">{{ date('d/m/y', strtotime($image->created_at)) }}</div>
                 </div>
             @endforeach
             @if(count($images) == 0)

@@ -4,13 +4,13 @@
 
 @section('content')
 
-<div>
+<div class="centerContainer">
     <span>Envie sua imagem</span>
-    <form action="/images" method="POST" enctype="multipart/form-data">
+    <form action="/images" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; align-items: center;">
         @csrf
         <input type="text" placeholder="Título da imagem" name="title"/>
-        <input type="file" id="image" name="image"/>
-        <button id="createAccButton" type="submit">Enviar Imagem</button>
+        <input type="file" id="image" name="image" />
+        <button id="createAccButton" type="submit">ENVIAR IMAGEM</button>
     </form>
 </div>
 

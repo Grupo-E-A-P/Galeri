@@ -22,7 +22,7 @@
             <input type="password" name="password" required autocomplete="current-password" placeholder="Senha"/>
 
             <a>
-                <button id="enterAccButton" >{{ __('Entrar') }}</button>
+                <button id="enterAccButton" >{{ __('ENTRAR') }}</button>
             </a>
 
             <!-- @if (Route::has('password.request'))

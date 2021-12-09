@@ -3,11 +3,11 @@
 @section('title', 'Galeri - Cadastro')
 
 @section('content')
+    <div style="display: flex; flex: 1; align-items: center;">
         <x-slot name="logo">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
-
         <form id="registerContainer" action="{{ route('register') }}" method="POST">
             @csrf
             <span id="title">Cadastro</span>
@@ -26,6 +26,7 @@
                 <span id="goBack">Voltar</span>
             </a>
         </form>
+    </div>
 
 @endsection
 
