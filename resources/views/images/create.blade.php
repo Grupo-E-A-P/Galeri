@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Galeri')
+@section('title', 'Galeri - Enviar imagem')
 
 @section('content')
 

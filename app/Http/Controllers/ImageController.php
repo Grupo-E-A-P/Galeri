@@ -60,4 +60,40 @@ class ImageController extends Controller
 
         return view ('images.dashboard', ['images' => $images]);
     }
+
+    public function destroy($id) {
+
+        Image::findOrFail($id)->delete();
+
+        return redirect('/home')->with('msg', 'Imagem excluída com sucesso!');
+    }
+
+    public function edit($id) {
+
+        $image = Image::findOrFail($id);
+
+        return view ('images.edit' , ['image' => $image]);
+    }
+
+    public function update(Request $request) {
+
+        $data = $request->all();
+                //Image Upload
+        if($request->hasFile('image') && $request->file('image')->isValid()) {
+            $requestImage = $request->image;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName(). strtotime("now")) . "." . $extension;
+
+            $requestImage->move(public_path('img/images'), $imageName);
+
+            $data['image'] = $imageName;
+        }
+
+        Image::findOrFail($request->id)->update($data);
+
+        return redirect('/home')->with('msg', 'Imagem editada com sucesso!');
+
+    }
 }

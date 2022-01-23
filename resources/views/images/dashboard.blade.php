@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Dashboard')
+@section('title', 'Galeri - Dashboard')
 
 @section('content')
 
@@ -25,8 +25,14 @@
                 <a href="/images/{{ $image->id }}"> <span>{{ $image->title }}</span> </a>
 
                 <div>
-                    <a href="/"> <span>Editar </span> </a>
-                    <a href="/"> <span>Deletar</span> </a>
+                    <a href="/images/edit/{{ $image->id }}">
+                        <button>EDITAR</button>
+                    </a>
+                    <form action="/images/{{ $image->id}}" method="POST" >
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">DELETAR</button>
+                    </form>
                 </div>
             </div>
         @endforeach

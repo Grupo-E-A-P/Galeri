@@ -31,6 +31,14 @@ Route::get('/images/{id}', [ImageController::class, 'show'] );
 
 Route::post('/images', [ImageController::class, 'store'] );
 
+Route::delete('/images/{id}', [ImageController::class, 'destroy'] )->middleware('auth');
+
+Route::get('/images/edit/{id}', [ImageController::class, 'edit'] )->middleware('auth');
+
+Route::put('/images/update/{id}', [ImageController::class, 'update'] )->middleware('auth');
+
+
+
 // Route::get('/cadastro', function () {
 // 	return view('register');
 // })->name('galeri.cadastrar');
