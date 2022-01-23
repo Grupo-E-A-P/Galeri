@@ -375,7 +375,34 @@ input {
     background-color: #37349e;
 }
 
+/*Dashboard*/
 
+#tableTop {
+    display: flex;
+    justify-content: space-between;
 
+    padding: 20px;
+    width: 80%;
 
+    background-color: #1c1e3d;
+}
 
+#tableRest {
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    background-color: #07061A;
+}
+
+.tableItem {
+    display: flex;
+    justify-content: space-between;
+    border: solid #fff 1px;
+    border-top: none;
+
+    padding: 20px;
+    width: 100%;
+
+    background-color: #1D1A66;
+}

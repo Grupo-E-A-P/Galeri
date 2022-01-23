@@ -25,7 +25,9 @@ use App\Http\Controllers\ImageController;
 
 Route::get('/home', [ImageController::class, 'index'] )->name('galeri.inicio');
 
-Route::get('/images/create', [ImageController::class, 'create'] );
+Route::get('/images/create', [ImageController::class, 'create'] )->middleware('auth');
+
+Route::get('/images/{id}', [ImageController::class, 'show'] );
 
 Route::post('/images', [ImageController::class, 'store'] );
 
@@ -49,10 +51,10 @@ Route::get('/home/{id}', function ($id) {
 	return view('image', ['id' => $id]);
 });
 
-
+Route::get('/dashboard', [ImageController::class, 'dashboard'])-> middleware('auth');
 
 //view = helper
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('dashboard');
+// })->name('dashboard');

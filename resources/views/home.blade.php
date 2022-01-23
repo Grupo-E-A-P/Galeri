@@ -21,11 +21,18 @@
             <div id="user" style="margin-left: auto">Olá, Guest</div>
             @endguest
 
+            @auth
+                <a href="/dashboard">
+                    <span id="user" style="margin-left: 20px">Minhas imagens</span>
+                </a>
+            @endauth
+
             <a href="/help">
                 <span id="help">Ajuda</span>
             </a>
 
             @auth
+
             <form action="logout" method="POST" style="font-size: 0;">
                 @csrf
                 <a href="/logout" onclick="event.preventDefault();
@@ -43,6 +50,9 @@
                 <div id="imageContainer">
                     <span>{{ $image->title}} - {{ date('d/m/y', strtotime($image->created_at)) }}</span>
                     <img src="/img/images/{{ $image->image }}" alt="{{$image ->title}}" id="feedImage"/>
+                    <a href="/images/{{ $image->id }}">
+                        <button>Saiba Mais</button>
+                    </a>
                 </div>
             @endforeach
             @if(count($images) == 0)

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Image;
+use App\Models\User;
 
 class ImageController extends Controller
 {
@@ -35,9 +36,28 @@ class ImageController extends Controller
             $image->image = $imageName;
         }
 
+        $user = auth()->user();
+        $image->user_id = $user->id;
 
         $image->save();
 
         return redirect('/home')->with('msg', 'Imagem enviada com sucesso!');
+    }
+
+    public function show($id){
+        $image = Image::findOrFail($id);
+
+        $imageOwner = User::where('id', $image->user_id)->first()->toArray();
+
+        return view ('images.show', ['image' => $image, 'imageOwner' => $imageOwner]);
+    }
+
+    public function dashboard() {
+
+        $user = auth()->user();
+
+        $images = $user->images;
+
+        return view ('images.dashboard', ['images' => $images]);
     }
 }
