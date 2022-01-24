@@ -23,7 +23,7 @@
 
             @auth
                 <a href="/dashboard">
-                    <span id="user" style="margin-left: 20px">Minhas imagens</span>
+                    <span id="myPictures" style="margin-left: 20px">Minhas imagens</span>
                 </a>
             @endauth
 
@@ -51,7 +51,7 @@
                     <span>{{ $image->title}} - {{ date('d/m/y', strtotime($image->created_at)) }}</span>
                     <img src="/img/images/{{ $image->image }}" alt="{{$image ->title}}" id="feedImage"/>
                     <a href="/images/{{ $image->id }}">
-                        <button>Saiba Mais</button>
+                        <button id="uploadButton" style="margin: 5px 0 0 auto;">Saiba Mais</button>
                     </a>
                 </div>
             @endforeach
@@ -62,8 +62,15 @@
     </div>
 
     <div id="theme">
-       <p>TEMA</p>
+        <p>TEMA: Conclusão</p>
+        @auth
+            @if( Auth::user()->name == 'adm-eap')
+                <button id="uploadButton">EDITAR</button>
+            @else
+            @endif
+        @endauth
     </div>
+
 
 
 @endsection

@@ -26,12 +26,12 @@
 
                 <div>
                     <a href="/images/edit/{{ $image->id }}">
-                        <button>EDITAR</button>
+                        <button id="editButton">EDITAR</button>
                     </a>
                     <form action="/images/{{ $image->id}}" method="POST" >
                         @csrf
                         @method('DELETE')
-                        <button type="submit">DELETAR</button>
+                        <button id="deleteButton" type="submit"  style="margin-top: 5px;">DELETAR</button>
                     </form>
                 </div>
             </div>

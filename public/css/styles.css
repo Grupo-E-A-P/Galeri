@@ -86,6 +86,7 @@ a {
 
 #theme {
     display: flex;
+    flex-direction: column;
     position: absolute;
     z-index: 1;
     top: 60px;
@@ -120,6 +121,18 @@ a {
 
 #uploadButton:hover {
     background-color: #5953ca;
+}
+
+#myPictures {
+    color: #fff;
+    font-size: 18px;
+
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#myPictures:hover {
+    color: rgb(255, 243, 221)
 }
 
 #quit {
@@ -398,11 +411,54 @@ input {
 .tableItem {
     display: flex;
     justify-content: space-between;
-    border: solid #fff 1px;
-    border-top: none;
 
-    padding: 20px;
+    padding: 10px 20px;
+    margin-bottom: 5px;
     width: 100%;
 
+    align-items: center;
+
     background-color: #1D1A66;
+}
+
+#editButton {
+    background-color: #3FB324;
+    border: none;
+    color: #fff;
+    padding: 9px 5px;
+    text-align: center;
+
+    width: 150px;
+    margin-left: 20px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+#editButton:hover {
+    background-color: #55e735;
+}
+
+#deleteButton {
+    background-color: #FF2919;
+    border: none;
+    color: #fff;
+    padding: 9px 5px;
+    text-align: center;
+
+    width: 150px;
+    margin-left: 20px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+#deleteButton:hover {
+    background-color: #ff847b;
 }
